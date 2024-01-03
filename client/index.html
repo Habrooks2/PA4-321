@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href = "index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+<style>
+    body{
+        background-color:#333333
+    }
+    th{
+        background-color:#FFBF00;
+        color: grey;
+    }
+    tr:nth-child(odd){ 
+        background-color: #FFEAAA;
+        color: black;
+    }
+    tr:nth-child(even){
+        background-color: white;
+        color: black;
+    }
+</style>
+
+<body onload = handleOnLoad()>
+    <div class="generalStyle">
+        <img id="myPicture" src="fitness.jpg" class ="img-responsive" alt="Person Running"> 
+        <h1 id="myHeader">Fitness Tracker</h1>
+        
+    </div>
+
+    <div class="buttonStyles" data-toggle="buttons">
+        <button type="button" id="addExerciseButton" class="btn btn-outline-warning"> Add Exercise</button>
+        <button type="button" id="viewAllExercisesButton" class="btn btn-outline-warning">View All Exercises</button>
+    </div>
+    
+    <div id="app">
+        <form>
+            <input type="text" id="exerciseNumber" placeholder="Number Generated" disabled value="Number Generated">
+            <input type="text" id="exerciseType" placeholder="Type">
+            <input type="text" id="exerciseCompleted" placeholder=" Date as M/D/Y">
+            <input type="text" id="exerciseDistance" placeholder="Distance">    
+        </form>
+    </div>
+    <div id="exerciseTableBody"></div>
+    <script src="index.js"></script>
+    
+
+</body>
+
+</html>        
